@@ -1,0 +1,10 @@
+requests
+colorama
+future
+psutil
+colorlog
+cryptography
+GitPython
+mcdbot
+PyYAML
+ruamel.base

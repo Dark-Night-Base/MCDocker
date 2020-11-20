@@ -1,4 +1,4 @@
-FROM openjdk:8u212-jre-alpine
+FROM ubuntu:18.04
 
 LABEL version="0.0.1"
 LABEL maintainer="scirocco_gti@yeah.net"
@@ -11,11 +11,11 @@ ARG TARGETOS=linux
 ARG TARGETARCH=amd64
 ARG TARGETVARIANT=""
 
-COPY MCDReforged/requirements.txt ./
+COPY requirements.txt ./
 COPY mcstatus /usr/local/bin
 
 RUN apt update \
-    && apt install -y python3 python3-pip \
+    && apt install -y python3 python3-pip openjdk-11-jre-headless \
     && pip3 install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 WORKDIR /data
