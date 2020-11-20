@@ -1,6 +1,7 @@
 # MCDocker
 
 a docker image based on [MCDReforged](https://github.com/Fallen-Breath/MCDReforged)
+ and [docker-minecraft-server](https://github.com/itzg/docker-minecraft-server)
 
 ## Requirements
 
@@ -42,7 +43,7 @@ Then run:
 # This will take a while (~5 min), fetch a cup of coffee for yourself.
 sudo docker build -t mcdocker:v0 .
 # Replace the path to MCDReforged
-sudo docker run -itd -v /your/path/to/MCDReforged:/data mcdocker:v0
+sudo docker run -itd -p 25565:25565 -v /your/path/to/MCDReforged:/ data -e ENABLE_AUTOPAUSE=TRUE mcdocker:v0
 # Docker should return the id of the container
 ```
 

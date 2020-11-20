@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if isTrue "${ENABLE_AUTOPAUSE}"; then
+  ${SCRIPTS:-/}start-autopause
+fi
+python3 MCDReforged.py
