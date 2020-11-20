@@ -11,11 +11,13 @@ ARG TARGETOS=linux
 ARG TARGETARCH=amd64
 ARG TARGETVARIANT=""
 
+ADD https://github.com/itzg/mc-monitor/releases/download/0.6.1/mc-monitor_0.6.1_linux_arm64.tar.gz /usr/local/bin
+
 COPY requirements.txt ./
 COPY mcstatus /usr/local/bin
 
 RUN apt update \
-    && apt install -y python3 python3-pip openjdk-11-jre-headless \
+    && apt install -y python3 python3-pip openjdk-11-jre-headless rsync \
     && pip3 install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 WORKDIR /data

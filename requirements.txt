@@ -7,4 +7,4 @@ cryptography
 GitPython
 mcdbot
 PyYAML
-ruamel.base
+ruamel.yaml

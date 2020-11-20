@@ -1,5 +1,22 @@
 #!/bin/bash
 
+function isTrue {
+  local value=${1,,}
+
+  result=
+
+  case ${value} in
+    true|on)
+      result=0
+      ;;
+    *)
+      result=1
+      ;;
+  esac
+
+  return ${result}
+}
+
 if isTrue "${ENABLE_AUTOPAUSE}"; then
   ${SCRIPTS:-/}start-autopause
 fi

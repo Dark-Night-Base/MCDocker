@@ -1,7 +1,5 @@
 #!/bin/bash
 
-. ${SCRIPTS:-/}start-utils
-
 if isTrue "${DISABLE_HEALTHCHECK}"; then
   echo "Healthcheck disabled"
   exit 0
