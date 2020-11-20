@@ -3,6 +3,13 @@
 a docker image based on [MCDReforged](https://github.com/Fallen-Breath/MCDReforged)
  and [docker-minecraft-server](https://github.com/itzg/docker-minecraft-server)
 
+## Features
+
+- [Full MCDReforged functions](https://github.com/Fallen-Breath/MCDReforged)
+- [Healthcheck](https://github.com/itzg/docker-minecraft-server#healthcheck)
+- [Autopause](https://github.com/itzg/docker-minecraft-server#autopause-experimental)
+- [Resource control via docker](https://docs.docker.com/config/containers/resource_constraints/#:~:text=Docker%20provides%20ways%20to%20control%20how%20much%20memory%2C,features%20require%20your%20kernel%20to%20support%20Linux%20capabilities.)
+
 ## Requirements
 
 ### Install Docker
