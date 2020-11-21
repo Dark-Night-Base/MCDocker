@@ -25,7 +25,7 @@ First run:
 # This will take a while (~5 min), fetch a cup of coffee for yourself.
 sudo docker build -t mcdocker:v0 .
 
-# Replace the path to MCDReforged and the TimeZone
+# Replace the absolute path to MCDReforged and the TimeZone
 sudo docker run -itd -p 25565:25565 -v /path/to/MCDReforged:/data -e ENABLE_AUTOPAUSE=TRUE -e TZ=Asia/Shanghai mcdocker:v0
 # Docker should return the id of the container
 ```
@@ -37,7 +37,7 @@ Then the MCDocker should be running in the background. To go back to the contain
 sudo docker attach <container-id>
 # Use Ctrl-p + Ctrl-q to exit! Don't use Ctrl-c!
 ```
-Use `Ctrl-p + Ctrl-q` to exit! Don't use ~~`Ctrl-c`~~!
+**Use `Ctrl-p + Ctrl-q` to exit! Don't use ~~`Ctrl-c`~~!**
 
 ## Notes
 
